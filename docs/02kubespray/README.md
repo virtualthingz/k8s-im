@@ -15,6 +15,9 @@ cd kubespray
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
 
+source ~/.bashrc
+//(base) 생김
+
 # Install dependencies from ``requirements.txt``
 pip install -r requirements.txt
 # pip install --ignore-installed ruamel.yaml
