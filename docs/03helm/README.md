@@ -103,8 +103,14 @@ helm delete foo
 helm list
 ```
 
-### helm 외부 저장소
+### 외부 패키지 설치 ()
 helm install $RELEASE_NAME $REPO/$CHART_NAME
+helm repo add stable https://kubernetes-charts.storage.googleapis.com
+helm repo update
+helm install my-release stable/jenkins
+
+### helm 외부 저장소
+
 ```bash
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo update
