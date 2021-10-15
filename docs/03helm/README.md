@@ -111,6 +111,8 @@ helm repo update
 chart 설치
 helm install my-release stable/jenkins
 ```
+https://artifacthub.io 
+에 가면 많은 chart(패키지) 가 있다
 
 ### helm 외부 저장소
 
