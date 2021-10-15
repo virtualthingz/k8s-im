@@ -104,7 +104,7 @@ helm list
 ```
 
 ### helm 외부 저장소
-
+helm install $RELEASE_NAME $REPO/$CHART_NAME
 ```bash
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo update
