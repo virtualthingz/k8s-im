@@ -106,9 +106,9 @@ helm list
 ### 외부 패키지 설치 (설명)
 ```bash
 helm install $RELEASE_NAME $REPO/$CHART_NAME
-helm repo add stable https://kubernetes-charts.storage.googleapis.com
-helm repo update
-chart 설치
+helm repo add stable https://kubernetes-charts.storage.googleapis.com (외부 저장소 연결)
+helm repo update (업데이트)
+하고나면 해당 리파지토리의 모든 차트를 stable 이란 repository 이름으로 설치 할수 있다 (마치 yum 과 같음)
 helm install my-release stable/jenkins
 ```
 https://artifacthub.io 
