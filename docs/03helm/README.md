@@ -55,12 +55,18 @@ helm list -n kube-system
 ```
 
 
-
+완성된 템플릿보기
 ```bash
 helm template foo ./mychart > foo-output.yaml
 
 cat foo-output.yaml
 ```
+결국 helm install
+```bash
+helm template foo ./mychart | kubectl apply -f - 
+```
+와 동일하다
+
 
 ```bash
 kubectl get svc
