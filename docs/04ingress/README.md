@@ -33,6 +33,18 @@ kubectl get svc -n ctrl
 kubectl get pod -n ctrl -owide
 ```
 
+pod가 어디 떠 있는지 확인한후 해당 노드의 IP를 본다
+kubectl get node -owide
+NAME    STATUS   ROLES    AGE   VERSION   INTERNAL-IP     EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION   CONTAINER-RUNTIME
+node1   Ready    master   11h   v1.19.9   10.180.76.121   <none>        Ubuntu 20.04.2 LTS   5.4.0-1045-aws   docker://19.3.14
+node2   Ready    <none>   11h   v1.19.9   10.180.76.79    <none>        Ubuntu 20.04.2 LTS   5.4.0-1045-aws   docker://19.3.14
+node3   Ready    <none>   11h   v1.19.9   10.180.76.118   <none>        Ubuntu 20.04.2 LTS   5.4.0-1045-aws   docker://19.3.14
+
+private ip 로 그 서버에 접속해서 퍼블릭 ip를 얻는다
+>ssh 10.180.76.118
+>curl ifconfig.co
+  54.180.94.114
+  
 ## `Ingress` 기본 사용법
 
 ### 도메인 주소 테스트
