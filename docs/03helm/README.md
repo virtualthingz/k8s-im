@@ -43,6 +43,7 @@ spec:
 
 ### helm chart 
 
+helm install $realease_name $chart_directory
 ```bash
 helm install foo ./mychart
 ```
